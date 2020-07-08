@@ -6,27 +6,19 @@ for i in range(h):
     char_c[i] = list(c)
 
 ans = 0
-for i in range(2 ** h):
-    row_list = []
-    row_list.append(bin(i))
-    for j in range(2 ** w):
+for row_bit in range(2 ** h):
+    for col_bit in range(2 ** w):
         count = 0
-        col_list = []
-        col_list.append(bin(j))
         for row in range(h):
-            if row_list[row]:
+            if ((row_bit >> row) & 1):
                 continue
-            try:
-                print(hoge[2])
-            except:
-                None
             for col in range(w):
-                if col < len(col_list):
+                if ((col_bit >> col) & 1):
                     continue
-                print(char_c[row][col], end='')
+                #print(char_c[row][col], end='')
                 if char_c[row][col] == '#':
                     count += 1
-            print()
+            # print()
         if count == k:
             ans += 1
 print(ans)
