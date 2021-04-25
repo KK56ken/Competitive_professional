@@ -14,17 +14,13 @@ def main():
     nmin = max(one_liner)
     mmin = min(tow_liner)
 
-    for i in range(n):
-        num = abs(one_liner[i] - tow_liner[i])
 
-    result = abs(nmin - mmin)
+    result = mmin - nmin
 
-    if num == 0:
-        print(0)
-    elif result == 0:
-        print(result)
-    else:
+    if result >= 0:
         print(result+1)
+    else:
+        print(0)
 
 
 main()
