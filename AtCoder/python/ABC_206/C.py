@@ -22,7 +22,7 @@ def main():
   num = cmb(len(a),2)
 
   c = collections.Counter(a)
-
+  print(c)
   # for i in range(1,len(c)+1):
   #   if c[i] > 1:
   #     for j in range(1,c[i]):
