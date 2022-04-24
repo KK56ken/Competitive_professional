@@ -3,8 +3,19 @@ def main():
     takahashi = 0
     aoki = 0
     
+    takahashi = (x // (a + c)) * a + x % (a + c)
     
-    a * b
+    if x % (a+c) > a:
+        takahashi -= x%(a+c) - a
+    
+    takahashi = takahashi * b
+    
+    aoki = (x // (d + f)) * d + x % (d + f)
+    
+    if x % (d+f) > d:
+        aoki -= x%(d+f) - d
+
+    aoki = aoki * e
     
     # print(takahashi, aoki)
 
