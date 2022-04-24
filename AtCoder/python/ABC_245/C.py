@@ -3,12 +3,11 @@ def main():
 
     A = list(map(int, input().split()))
     B = list(map(int, input().split()))
-    
+
     Aflag = False
     Bflag = False
     flag = False
     eflag = False
-    
 
     for i in range(N-1):
         if Aflag and not Bflag:
@@ -21,9 +20,9 @@ def main():
             else:
                 Aflag = False
                 Bflag = False
-            
+
             eflag = True
-                
+
         elif Bflag and not Aflag:
             if abs(B[i]-A[i+1]) <= K:
                 Aflag = True
@@ -35,8 +34,8 @@ def main():
                 Aflag = False
                 Bflag = False
             eflag = True
-        
-        if not eflag: 
+
+        if not eflag:
             if Aflag or i == 0:
                 if abs(A[i]-A[i+1]) <= K:
                     Aflag = True
@@ -61,14 +60,12 @@ def main():
         # print("Bflag=",Bflag)
         # print("A[",i,"]=",A[i])
         # print("B[",i,"]=",B[i])
-        
-        
+
         if not Aflag and not Bflag:
             flag = True
             break
-        
+
     if flag:
         print("No")
     else:
         print("Yes")
-main()
