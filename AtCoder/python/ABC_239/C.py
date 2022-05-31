@@ -18,9 +18,8 @@ def main():
         
         if root5 == result1:
             flag1 = True
-            
         if root5 == result2:
-            flag2 =True
+            flag2 = True
         if flag1 and flag2:
             print("Yes")
             exit()
