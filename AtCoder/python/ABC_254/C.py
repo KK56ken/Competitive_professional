@@ -6,6 +6,7 @@ l = [[] for _ in range(K)]
 
 for i in range(N):
     l[i % K].append(a[i])
+
 for i in range(K):
     l[i] = sorted(l[i])
 

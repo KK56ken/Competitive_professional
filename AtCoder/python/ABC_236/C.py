@@ -1,11 +1,13 @@
 n,m = map(int,input().split())
 
 
-S = list(map(str,input().split(" ")))
-T = set(map(str,input().split(" ")))
+s = input().split()
+t = set(input().split())
 
-for a in S:
-    if a in T:
+print(s,t)
+for x in s:
+    if x in t:
         print("Yes")
     else:
         print("No")
+    # print("Yes" if x in t else "No")
